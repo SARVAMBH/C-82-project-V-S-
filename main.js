@@ -1,5 +1,4 @@
 var mouse_event = "empty";
-var last_position_of_x,last_position_of_y;
 
 canvas = document.getElementById("myCanvas");
 ctx = canvas.getContext("2d");
@@ -44,10 +43,10 @@ function my_mousemove(e)
         ctx.beginPath();
         ctx.strokeStyle = color;
         ctx.lineWidth = width_of_the_line;
-        ctx.arc(current_position_of_mouse_x,current_position_of_mouse_y,radius,o,2 * Math.PI);
+        ctx.arc(current_position_of_mouse_x,current_position_of_mouse_y,radius,0,2 * Math.PI);
         ctx.stroke();
 }
-
+}
 function ClearArea()
 {
     ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
